@@ -6,3 +6,6 @@ export { default as ProductDetailsNotFoundSection } from "./products/product-det
 
 // Cart details section
 export { default as CartDetailsSection } from "./cart/cart-details-section";
+
+// Favorite list section
+export { default as FavoriteListSection } from "./favorite/favorite-list-section";

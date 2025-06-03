@@ -1,9 +1,5 @@
-interface FavoritePageProps {}
+import { FavoriteListSection } from "@/components";
 
-export default async function FavoritePage(props: FavoritePageProps) {
-  return (
-    <div className="flex flex-col w-screen h-screen items-center justify-center">
-      <h1>{`This is Favorite Page`}</h1>
-    </div>
-  );
+export default async function FavoritePage() {
+  return <FavoriteListSection />;
 }

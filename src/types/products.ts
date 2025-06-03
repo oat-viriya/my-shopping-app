@@ -15,3 +15,7 @@ export interface ProductRating {
 export type ProductDataWithQuantity = ProductData & {
   quantity: number;
 };
+
+export type ProductDataWithFavorite = ProductData & {
+  isFavorite: boolean;
+};

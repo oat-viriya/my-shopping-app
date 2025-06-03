@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/contexts/cart-context";
+import { FavoriteListProvider } from "@/contexts/favorite-context";
 import NavigationBar from "@/components/layout/navigation-bar";
 
 const geistSans = Geist({
@@ -30,8 +31,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-dvh flex flex-col font-[family-name:var(--font-geist-sans)]`}
       >
         <CartProvider>
-          <NavigationBar />
-          {children}
+          <FavoriteListProvider>
+            <NavigationBar />
+            {children}
+          </FavoriteListProvider>
         </CartProvider>
       </body>
     </html>
