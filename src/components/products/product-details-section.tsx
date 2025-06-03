@@ -65,16 +65,16 @@ export default function ProductDetailsSection({
       </div>
       <div className="flex items-center justify-between w-full">
         <button
-          onClick={handleClickReturnToHomePage}
-          className="px-2 py-1 cursor-pointer lg:px-4 lg:py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors"
-        >
-          กลับสู่หน้ารายการสินค้า
-        </button>
-        <button
           onClick={handleClickAddToCart}
-          className="px-2 py-1 cursor-pointer lg:px-4 lg:py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors"
+          className="px-2 py-1 cursor-pointer lg:px-4 lg:py-2 bg-slate-600 text-white rounded hover:bg-slate-800 transition-colors"
         >
           เพิ่มลงรถเข็น
+        </button>
+        <button
+          onClick={handleClickReturnToHomePage}
+          className="px-2 py-1 cursor-pointer lg:px-4 lg:py-2 bg-slate-600 text-white rounded hover:bg-slate-800 transition-colors"
+        >
+          กลับสู่หน้ารายการสินค้า
         </button>
       </div>
     </div>

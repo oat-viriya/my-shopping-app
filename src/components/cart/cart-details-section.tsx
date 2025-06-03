@@ -26,7 +26,7 @@ export default function CartDetailsSection() {
   }, [cart]);
 
   return (
-    <section className="flex grow container mx-auto flex-col h-full w-screen items-center justify-center">
+    <section className="flex grow container mx-auto flex-col h-full w-full items-center justify-center">
       <div className="flex flex-col items-center p-6 border border-gray-200 bg-white shadow-md rounded-lg max-w-xl gap-6 w-full">
         {isCartEmpty ? (
           <>
@@ -46,7 +46,7 @@ export default function CartDetailsSection() {
         )}
         <button
           onClick={() => router.push(ROUTES.HOME)}
-          className="px-2 py-1 cursor-pointer lg:px-4 lg:py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors"
+          className="px-2 py-1 cursor-pointer lg:px-4 lg:py-2 bg-slate-600 text-white rounded hover:bg-slate-800 transition-colors"
         >
           กลับสู่หน้ารายการสินค้า
         </button>

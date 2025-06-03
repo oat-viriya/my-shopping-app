@@ -84,7 +84,7 @@ export default function ProductCard({
           </div>
           <button
             onClick={handleClickAddToCart}
-            className="px-2 py-1 cursor-pointer lg:px-4 lg:py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors"
+            className="px-2 py-1 cursor-pointer lg:px-4 lg:py-2 bg-slate-600 text-white rounded hover:bg-slate-800 transition-colors"
           >
             เพิ่มลงรถเข็น
           </button>

@@ -33,7 +33,9 @@ export default function RootLayout({
         <CartProvider>
           <FavoriteListProvider>
             <NavigationBar />
-            {children}
+            <main className="flex flex-col grow gap-[32px] items-center container mx-auto justify-center sm:items-start p-8 sm:p-20 overflow-auto min-h-fit">
+              {children}
+            </main>
           </FavoriteListProvider>
         </CartProvider>
       </body>
