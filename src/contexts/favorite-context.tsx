@@ -22,7 +22,7 @@ export const FavoriteListProvider: React.FC<React.PropsWithChildren> = ({
     []
   );
 
-  const addToFavorite = (product: ProductDataWithFavorite) => {
+  const addToFavorite = (product: ProductData) => {
     const isAlreadyFavorite = favoriteList.find(
       (item) => item.id === product.id
     );
@@ -34,7 +34,7 @@ export const FavoriteListProvider: React.FC<React.PropsWithChildren> = ({
     }
   };
 
-  const removeFromFavorite = (product: ProductDataWithFavorite) => {
+  const removeFromFavorite = (product: ProductData) => {
     setFavoriteList((prev) => prev.filter((item) => item.id !== product.id));
   };
 
