@@ -2,6 +2,12 @@
   "name": "my-shopping-app",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm",
+    "pnpm": ">=9",
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
