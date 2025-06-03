@@ -16,20 +16,13 @@ export default async function ProductDetailsPage({
     (product) => product.id.toString() === productId
   );
 
-  const containerClassName =
-    "flex flex-col grow h-full w-full items-center justify-center";
-
-  if (!productData) {
-    return (
-      <section className={containerClassName}>
-        <ProductDetailsNotFoundSection />
-      </section>
-    );
-  }
-
   return (
-    <section className={containerClassName}>
-      <ProductDetailsSection productData={productData} />
+    <section className="flex flex-col grow h-full w-full items-center justify-center">
+      {productData ? (
+        <ProductDetailsSection productData={productData} />
+      ) : (
+        <ProductDetailsNotFoundSection />
+      )}
     </section>
   );
 }
