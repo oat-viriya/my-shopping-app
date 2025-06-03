@@ -27,7 +27,7 @@ export default function CartDetailsSection() {
 
   return (
     <section className="flex grow container mx-auto flex-col h-full w-screen items-center justify-center">
-      <div className="flex flex-col items-center p-6 bg-white shadow-md rounded-lg max-w-xl gap-6 w-full">
+      <div className="flex flex-col items-center p-6 border border-gray-200 bg-white shadow-md rounded-lg max-w-xl gap-6 w-full">
         {isCartEmpty ? (
           <>
             <h2 className="text-2xl font-bold mb-4">รถเข็นว่างเปล่า</h2>
