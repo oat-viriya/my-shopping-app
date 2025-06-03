@@ -4,7 +4,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-} from "../ui/navigation-menu";
+} from "@/components";
 import { ROUTES } from "@/constants";
 
 const navbarLinks = [

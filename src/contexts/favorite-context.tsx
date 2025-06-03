@@ -1,12 +1,10 @@
 "use client";
-import { ProductData, ProductDataWithFavorite } from "@/types/products";
+import { ProductData } from "@/types/products";
 import React, { createContext, useContext, useState } from "react";
 
 export interface FavoriteContextValue {
-  favoriteList: ProductDataWithFavorite[];
-  setFavoriteList: React.Dispatch<
-    React.SetStateAction<ProductDataWithFavorite[]>
-  >;
+  favoriteList: ProductData[];
+  setFavoriteList: React.Dispatch<React.SetStateAction<ProductData[]>>;
   addToFavorite: (product: ProductData) => void;
   removeFromFavorite: (product: ProductData) => void;
 }
@@ -18,9 +16,7 @@ export const FavoriteListContext = createContext<FavoriteContextValue | null>(
 export const FavoriteListProvider: React.FC<React.PropsWithChildren> = ({
   children,
 }) => {
-  const [favoriteList, setFavoriteList] = useState<ProductDataWithFavorite[]>(
-    []
-  );
+  const [favoriteList, setFavoriteList] = useState<ProductData[]>([]);
 
   const addToFavorite = (product: ProductData) => {
     const isAlreadyFavorite = favoriteList.find(
@@ -29,7 +25,7 @@ export const FavoriteListProvider: React.FC<React.PropsWithChildren> = ({
     if (isAlreadyFavorite) return;
     else {
       setFavoriteList((prev) => {
-        return [...prev, { ...product, isFavorite: true }];
+        return [...prev, product];
       });
     }
   };
