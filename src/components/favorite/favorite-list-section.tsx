@@ -18,7 +18,7 @@ export default function FavoriteListSection() {
           <h2 className="text-2xl font-bold mb-4">ไม่มีรายการโปรด</h2>
         </div>
       ) : (
-        <div className="container auto-rows-auto mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl w-full">
+        <div className="container auto-rows-auto mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 max-w-6xl w-full">
           {favoriteList.map((product) => (
             <ProductCard
               key={product.id}
