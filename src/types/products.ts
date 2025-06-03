@@ -1,4 +1,4 @@
-export interface Product {
+export interface ProductData {
   id: number;
   name: string;
   desc: string;
@@ -11,3 +11,7 @@ export interface ProductRating {
   rate: number;
   count: number;
 }
+
+export type ProductDataWithQuantity = ProductData & {
+  quantity: number;
+};

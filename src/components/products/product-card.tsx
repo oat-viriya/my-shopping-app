@@ -1,13 +1,17 @@
 "use client";
 import { ROUTES } from "@/constants";
+import { useCart } from "@/contexts/cart-context";
+import { ProductData } from "@/types/products";
 import Link from "next/link";
 import Image from "next/image";
-import { Product } from "@/types/products";
 import React from "react";
 
-export default function ProductCard({ product }: { product: Product }) {
+export default function ProductCard({ product }: { product: ProductData }) {
+  const { addProductToCart } = useCart();
+
   const handleClickAddToCart = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
+    addProductToCart(product);
     alert(`เพิ่ม ${product.name} ลงรถเข็นเรียบร้อยแล้ว!`);
   };
 
