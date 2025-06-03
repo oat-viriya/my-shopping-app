@@ -8,6 +8,8 @@ export interface CartContextValue {
   resetCart: () => void;
   addProductToCart: (product: ProductData) => void;
   removeProductFromCart: (product: ProductData) => void;
+  incrementProductQuantity: (product: ProductData["id"]) => void;
+  decrementProductQuantity: (product: ProductData["id"]) => void;
 }
 
 export const CartContext = createContext<CartContextValue | null>(null);
@@ -52,6 +54,28 @@ export const CartProvider: React.FC<React.PropsWithChildren> = ({
     });
   };
 
+  const incrementProductQuantity = (productId: ProductData["id"]) => {
+    setCart((prevCart) => {
+      return prevCart.map((item) =>
+        item.id === productId ? { ...item, quantity: item.quantity + 1 } : item
+      );
+    });
+  };
+
+  const decrementProductQuantity = (productId: ProductData["id"]) => {
+    setCart((prevCart) => {
+      const existingProduct = prevCart.find((item) => item.id === productId);
+      if (existingProduct && existingProduct.quantity > 1) {
+        return prevCart.map((item) =>
+          item.id === productId
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        );
+      }
+      return prevCart.filter((item) => item.id !== productId);
+    });
+  };
+
   return (
     <CartContext
       value={{
@@ -60,6 +84,8 @@ export const CartProvider: React.FC<React.PropsWithChildren> = ({
         resetCart,
         addProductToCart,
         removeProductFromCart,
+        incrementProductQuantity,
+        decrementProductQuantity,
       }}
     >
       {children}
