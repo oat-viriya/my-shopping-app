@@ -17,7 +17,7 @@ export default async function ProductDetailsPage({
   );
 
   const containerClassName =
-    "flex flex-col h-screen w-screen items-center justify-center";
+    "flex flex-col grow h-full w-full items-center justify-center";
 
   if (!productData) {
     return (
