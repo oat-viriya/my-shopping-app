@@ -1,5 +1,5 @@
 import { productsData } from "@/data/products-data";
-import { ProductCard } from "./components";
+import { ProductCard } from "../components";
 import Image from "next/image";
 
 export default async function Home() {
